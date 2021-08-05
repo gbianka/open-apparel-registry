@@ -19,8 +19,8 @@ if [ "${BASH_SOURCE[0]}" = "${0}" ]; then
     if [ "${1:-}" = "--help" ]; then
         usage
     else
-        ./scripts/manage batch_process --list-id $1 --action parse \
-            && ./scripts/manage batch_process --list-id $1 --action geocode \
-            && ./scripts/manage batch_process --list-id $1 --action match
+        ./scripts/manage batch_process --list-id "$1" --action parse \
+            && ./scripts/manage batch_process --list-id "$1" --action geocode \
+            && ./scripts/manage batch_process --list-id "$1" --action match
     fi
 fi
